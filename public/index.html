@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contacts PWA App</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icons/logo.png" />
+  <meta name="theme-color" content="#ffffff">
+  <script type="module" src="js/script.js" defer></script>
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>Contacts</h1>
+    </header>
+
+    <div class="search-add-container"></div>
+    <input type="text" id="searchInput" placeholder="Search contacts" />
+   <button id="addContactBtn">＋</button>
+
+
+    <ul id="contactList"></ul>
+
+    <div id="contactModal" class="modal hidden">
+      <div class="modal-content">
+        <h2>New Contact</h2>
+        <form id="contactForm">
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="tel" name="phone" placeholder="Phone Number" required />
+          <input type="email" name="email" placeholder="Email" />
+          <input type="text" name="company" placeholder="Company" />
+          <button type="submit">Save Contact</button>
+        </form>
+        <button id="closeModal">Cancel</button>
+      </div>
+    </div>
+  </div>
+  <div id="confirmModal" class="modal hidden">
+    <div class="modal-content confirm-content">
+      <p>Weet je het zeker?</p>
+      <div class="confirm-buttons">
+        <button id="confirmYes" class="confirm-yes">Ja</button>
+        <button id="confirmNo"  class="confirm-no">Nee</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
